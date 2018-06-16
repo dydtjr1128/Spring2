@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.container-wrapper {
+	margin-top: 80px;
+}
+
+.table {
+	table-layout: fixed;
+}
+
+.table th {
+	text-align: center;
+	overflow: hidden;
+}
+
+.table td {
+	text-align: center;
+	overflow: hidden;/* 텍스트가 길면? th에대해 숨겨라 */
+	text-overflow: ellipsis;/* 숨겨도  넘어가면 ...으로 표시 */
+	white-space: nowrap;/* 줄넘김 하지말아라 */
+}  

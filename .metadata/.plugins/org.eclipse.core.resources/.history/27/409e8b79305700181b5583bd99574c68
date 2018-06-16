@@ -1,0 +1,59 @@
+package kr.ac.hansung.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import kr.ac.hansung.model.User;
+import kr.ac.hansung.service.UserService;
+
+@RestController
+@RequestMapping("/api")
+public class RestAPIController {
+	
+	@Autowired
+	UserService userService;
+	
+	// --- Retrieve All Users;
+	@RequestMapping(value="/uesers", method=RequestMethod.GET)
+	public ResponseEntity<List<User>> listAllUser(){
+		//ResponseEntity 사용시 header, body(Lust<user>도 json으로 변경되어서(jackson이 해줌)), HTTP.status 등을 한꺼번에 담아서 보낼 수있음
+		List<User> users = userService.findAllUsers();
+		if(users.isEmpty()) {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
+				
+	}
+	
+	// --- Retrieve Single User
+	@RequestMapping(value="/uesers/{id}", method=RequestMethod.GET)
+	public ResponseEntity<User> getUser(@PathVariable("id") long id){
+		User user = userService.findById(id);
+		if(user == null) {
+			// to do list : exception
+			
+		}
+		return new ResponseEntity<User>(user, HttpStatus.OK);
+				
+	}
+	
+	// --- Create a User
+	@RequestMapping(value="/uesers", method=RequestMethod.POST)
+	public ResponseEntity<> createUser(){
+		User user = userService.findById(id);
+		if(user == null) {
+			// to do list : exception
+			
+		}
+		return new ResponseEntity<Void>( HttpStatus.OK);
+				
+	}
+
+}

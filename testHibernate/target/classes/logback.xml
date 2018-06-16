@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} %-5level %logger{36} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+	
+	<logger name="org.hibernate.type.descriptor.sql" level="TRACE" /><!--TRACE, INFO, DEBUG 등 다 출력됨 ,  가장 위에 있는 root 아래 org.hibernaterk 가 있어서 All로 출력됨 -->
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>

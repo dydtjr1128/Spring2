@@ -1,0 +1,7 @@
+1526209917394	Rename package 'controller'
+1526209923188	Rename package 'model'
+1526209940510	Rename package 'service'
+1526209964661	Move compilation unit
+1526271784558	Rename type 'RestController'
+1526307708728	Move compilation unit
+1526307987737	Rename package 'exception'

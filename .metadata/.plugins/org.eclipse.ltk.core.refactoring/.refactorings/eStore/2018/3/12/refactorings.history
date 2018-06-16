@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;eStore/src/main/webapp/WEB-INF/templetes/fotter.jsp&apos; to &apos;footer.jsp&apos;" description="Rename resource &apos;fotter.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/templetes/fotter.jsp" name="footer.jsp" stamp="1521430721214" updateReferences="true"/>
+</session>

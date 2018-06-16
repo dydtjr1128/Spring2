@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!-- classpath 안에만 있으면 알아서 이 파일을 찾아서 인식함 java에 있어도 찾아지긴 하나 리소스파일이므로 여기에 저장 -->
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">q1w2e3</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/testdb</property>
+		
+		<property name="show_sql">true</property><!-- 콘솔에 Hibernate 생성 sql문장 보여주겠느냐(true=보여줌) -->
+		<property name="format_sql">false</property><!-- 포맷팅하면 보기좋게 길어지면 짤라서 다음줄에보여줌 그러나 느려짐? -->
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<!-- DB Table을 직접 Hibernate가 생성하겠다. 존재하면 지우고 새롭게 만듬(처음에 테스트 하기 좋음) 나중에는 update하면 제거하지않고 없거나 바뀔때만 -->
+		
+		<!-- Mapping방법 2가지 어노테이션, xml -->
+		
+		<!-- <mapping resource="com/websystique/hibernate/model/Student.hbm.xml" /> -->
+		<mapping class="testHibernate.Product"/><!-- 이게 어노테이션 -->
+		<mapping class="testHibernate.Category"/>
+		<mapping class="testHibernate.Person"/>
+		<mapping class="testHibernate.License"/>
+		
+	</session-factory>
+</hibernate-configuration>

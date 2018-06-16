@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:25 +0900] "GET /eStore/products HTTP/1.1" 200 4720
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:25 +0900] "GET /eStore/resources/css/main.css HTTP/1.1" 200 397
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:25 +0900] "GET /eStore/resources/css/carousel.css HTTP/1.1" 200 1749
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:25 +0900] "GET /eStore/resources/css/bootstrap.min.css HTTP/1.1" 200 144877
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:25 +0900] "GET /eStore/resources/images/1.png HTTP/1.1" 200 819684
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:25 +0900] "GET /eStore/resources/js/bootstrap.min.js HTTP/1.1" 200 48944
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:25 +0900] "GET /eStore/resources/images/2.png HTTP/1.1" 200 373214
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:25 +0900] "GET /eStore/resources/images/3.png HTTP/1.1" 200 948449
+0:0:0:0:0:0:0:1 - - [20/May/2018:17:27:26 +0900] "GET /favicon.ico HTTP/1.1" 404 1081

@@ -1,0 +1,19 @@
+package kr.ac.hansung.cse.controller;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class HomeController {
+	//static Logger logger = LoggerFactory.getLogger(HomeController.class);
+
+	// @RequestMapping(value="/", method = RequestMethod.GET).
+	@GetMapping("/")
+	public String home(Model model) {
+
+		//logger.debug("Calling home( )");
+
+		model.addAttribute("message", "hello world");
+		return "index";
+
+	}
+}
